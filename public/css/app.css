@@ -1,4 +1,23 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  font-family: "Segoe UI", sans-serif;
 }
+
+body {
+  background: linear-gradient(#cfe8f3, #eaf3f8);
+
+}
+#myfirst_div{
+    color: #4a90e2;
+    text-align: center;
+}
+
+.app {
+    
+  width: 50%;
+  margin: auto;
+  background: #e1f1f9;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
