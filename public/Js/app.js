@@ -63,7 +63,7 @@ function addTask() {
   const value = input.value.trim();
 
   if (value === "") {
-    feedback.textContent = "Input خاوية";
+    feedback.textContent = "insert your task ";
     feedback.classList.add("error");
     feedback.classList.remove("success");
     return;
