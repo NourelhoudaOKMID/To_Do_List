@@ -6,6 +6,7 @@ this is a simple  to do list buit with Html , css and js
 
 
 ---
+
 let's make  your to do list today 
 
 ## Functionality
@@ -14,14 +15,11 @@ let's make  your to do list today
 - Edit your tasks 
 - Mark your tasks as completed 
 - Delete tasks 
-
-
+--- 
 ## Technologies : 
-Html 
----
-Css
----
-js 
+- Html 
+- Css
+- JavaScript 
 ---
 ## Screenshot : 
 
