@@ -69,3 +69,24 @@ body {
   
 }
 
+
+ /*  style the check butn */
+.check-btn {
+  width: 16px;
+  height: 16px;
+  border: 2px solid #cfdce6;
+  border-radius: 4px;
+  background: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.check-btn::after {
+  content: "✔";
+  position: absolute;
+  top: -2px;
+  left: 2px;
+  font-size: 14px;
+  color: white;
+  display: none;
+}
