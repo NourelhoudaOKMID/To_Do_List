@@ -47,3 +47,25 @@ body {
   outline: none;
   font-size: 14px;
 }
+
+/* style the button */
+.add-task button {
+  border: none;
+  background: transparent;
+  font-size: 22px;
+  color: #4a90e2;
+  cursor: pointer;
+}
+/* style of task items  */
+
+.task {
+  background: #f7fbfe;
+  padding: 12px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3vh;
+  
+}
+
