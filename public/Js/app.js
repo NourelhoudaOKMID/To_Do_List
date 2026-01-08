@@ -31,7 +31,13 @@ function renderTasks() {
   });
 
 
-
+    editBtn.addEventListener("click", () => {
+      const newText = prompt("Edit task:", task.text);
+      if (newText === null) return;
+      if (newText.trim() === "") return;
+      task.text = newText.trim();
+      renderTasks();
+    });
 
 
 
