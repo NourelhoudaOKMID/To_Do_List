@@ -110,3 +110,52 @@ body {
   background: transparent;
   cursor: pointer;
 }
+
+/*  fix the decoration text xhen we click on the check  */
+.task.completed .task-text {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+/*  the color of the backgound  */
+.task.completed .check-btn {
+  background: #4a90e2;
+  background: #4a90e2;
+  border-color: #4a90e2;
+}
+/*  show the check content " done " */
+.task.completed .check-btn::after {
+  display: block;
+}
+
+
+/*  show error  */
+.feedback.error {
+  color: red;
+}
+ /*  saved  */
+.feedback.success {
+  color: green;
+}
+
+
+.feedback {
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  font-size: 13px;
+  height: 18px;
+  text-align: center;
+}
+
+
+.completed .task-text 
+{
+
+   text-decoration: line-through; 
+   }
+
+.completed .check-btn
+ { 
+  background: #4a90e2;
+   border-color: #4a90e2;
+ }
+
