@@ -39,7 +39,9 @@ function renderTasks() {
       renderTasks();
     });
 
-
+    deleteBtn.addEventListener("click", () => {
+      renderTasks();
+    });
 
     container.appendChild(clone);
   });
