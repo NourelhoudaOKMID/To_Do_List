@@ -4,6 +4,7 @@
 
 body {
   background: linear-gradient(#cfe8f3, #eaf3f8);
+  height: 100vh;
 
 }
 #myfirst_div{
