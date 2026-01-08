@@ -30,11 +30,20 @@ body {
 
 
 
-
+/* fixing the style of the parent of the input */
 .add-task {
   display: flex;
   background: #bcdff1;
   border-radius: 10px;
   padding: 10px;
   margin-bottom: 20px;
+}
+
+.add-task input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  /* when i click the border doesnt appear */
+  outline: none;
+  font-size: 14px;
 }
