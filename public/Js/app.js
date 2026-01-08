@@ -25,7 +25,10 @@ function renderTasks() {
       taskDiv.classList.remove("completed");
     }
 
-
+    checkBtn.addEventListener("click", () => {
+      task.completed = !task.completed;
+      renderTasks();
+  });
 
 
 
