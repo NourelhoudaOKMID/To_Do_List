@@ -4,6 +4,12 @@ const container = document.getElementById("tasksContainer");
 const template = document.getElementById("taskTemplate");
 const feedback = document.getElementById("feedback");
 
+let tasks = [];
+
+// Load tasks from localStorage 
+if (localStorage.getItem("tasks")) {
+  tasks = JSON.parse(localStorage.getItem("tasks"));
+}
 
 function renderTasks() {
   container.innerHTML = "";
@@ -28,7 +34,8 @@ function renderTasks() {
     checkBtn.addEventListener("click", () => {
       task.completed = !task.completed;
       renderTasks();
-  });
+      localStorage.setItem("tasks", JSON.stringify(tasks));
+    });
 
 
     editBtn.addEventListener("click", () => {
@@ -37,16 +44,53 @@ function renderTasks() {
       if (newText.trim() === "") return;
       task.text = newText.trim();
       renderTasks();
+      localStorage.setItem("tasks", JSON.stringify(tasks));
     });
 
     deleteBtn.addEventListener("click", () => {
+      tasks.splice(index, 1);
       renderTasks();
+      localStorage.setItem("tasks", JSON.stringify(tasks));
     });
 
     container.appendChild(clone);
   });
 
+  localStorage.setItem("tasks", JSON.stringify(tasks));
 }
 
+function addTask() {
+  const value = input.value.trim();
+
+  if (value === "") {
+    feedback.textContent = "Input خاوية";
+    feedback.classList.add("error");
+    feedback.classList.remove("success");
+    return;
+  }
+
+  tasks.push({ text: value, completed: false });
+  renderTasks();
+  input.value = "";
+
+  feedback.textContent = "Saved";
+  feedback.classList.add("success");
+  feedback.classList.remove("error");
+
+  setTimeout(() => {
+    feedback.textContent = "";
+    feedback.classList.remove("success");
+  }, 2000);
+
+  localStorage.setItem("tasks", JSON.stringify(tasks));
+}
+
+addBtn.addEventListener("click", addTask);
+
+input.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    addTask();
+  }
+});
 
 renderTasks();
