@@ -1,47 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./public/css/app.css">
+  <meta charset="UTF-8">
+  <title>Todo List</title>
+  <link rel="stylesheet" href="./public/css/app.css">
 </head>
 <body>
+<div class="app">
+  <header class="app-header">
+    <h1>To Do List </h1>
+  </header>
+
+  <div class="add-task">
+    <input id="taskInput" type="text" placeholder="Add New">
+
+    <button id="addBtn">+</button>
+  </div>
+      <div id="feedback" class="feedback"></div>
+
+  <div id="tasksContainer" ></div>
+
+  <!-- TEMPLATE -->
+  <template id="taskTemplate">
+    <div class="task">
+      <span class="task-text"></span>
+        <button class="check-btn"> </button>
+      <div class="actions">
+        <button class="edit-btn">✏️</button>
+        <button class="delete-btn">🗑️</button>
+      </div>
+    </div>
+  </template>
+</div>
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-    <script src="./public/Js/app.js"></script>
+  <script src="./public/Js/app.js"></script>
 </body>
 </html>
