@@ -90,3 +90,23 @@ body {
   color: white;
   display: none;
 }
+
+
+
+.task-text {
+  flex: 1;
+  margin-left: 12px;
+  color: #4a90e2;
+  font-size: 14px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.actions button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
